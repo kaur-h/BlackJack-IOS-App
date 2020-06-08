@@ -62,22 +62,7 @@ class ViewController: UIViewController{
         
         gameStatusLabel.adjustsFontSizeToFitWidth = true
         gameStatusLabel.text = "Game in Progress"
-        
-        
-        // let newCard = UIImageView()
-        //print(dealerCard.count)
-        /*
-        for i in 0..<dealerCard.count{
-            print(i)
-            let cs:CardSuit = dealerCard[i].suit
-            let cv:CardValue = dealerCard[i].value
-            print("\(cv.rawValue)" + "\(cs.rawValue)")
-            newCard.image = UIImage(named: "\(cv.rawValue)" + "\(cs.rawValue)")
-            dealerCards.distribution = UIStackView.Distribution.fillEqually
-            dealerCards.addArrangedSubview(newCard)
-        }
-        */
-        
+                
     }
     
     public func clearPlayerCards(){
