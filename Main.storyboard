@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-up-OhG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="qUs-T6-ga0">
+                                <rect key="frame" x="7" y="54" width="400" height="70"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-As-eLa" userLabel="Computer Stack View">
+                                <rect key="frame" x="83" y="132" width="249" height="239.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQ9-dv-6l2">
+                                        <rect key="frame" x="46" y="0.0" width="157.5" height="25.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tMb-wz-eMh">
+                                        <rect key="frame" x="0.0" y="30.5" width="249" height="162"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="2LJ-bV-Mvk">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="162"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="yXS-cU-8Yx">
+                                                <rect key="frame" x="137" y="0.0" width="112" height="162"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-Zg-0Dg">
+                                        <rect key="frame" x="96.5" y="197.5" width="56" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
+                                        <state key="normal" title="Deal">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSZ-f3-Kz2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ndY-EH-EPr" userLabel="Player Stack View">
+                                <rect key="frame" x="79" y="464" width="257" height="239.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-Na-lCI">
+                                        <rect key="frame" x="66.5" y="0.0" width="124" height="25.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="d7a-RP-IbY" userLabel="PlayerCards Stack View">
+                                        <rect key="frame" x="0.0" y="30.5" width="257" height="162"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="GrV-w3-PoP">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="162"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="g4S-mN-zM4">
+                                                <rect key="frame" x="145" y="0.0" width="112" height="162"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="SXR-Oj-DvA" userLabel="Hit &amp; Stand Stack View">
+                                        <rect key="frame" x="59" y="197.5" width="139" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW6-NY-Qke">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
+                                                <state key="normal" title="Hit">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUz-iY-ClB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfY-5f-qHy">
+                                                <rect key="frame" x="71" y="0.0" width="68" height="42"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
+                                                <state key="normal" title="Stand">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="standButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UrO-Tb-jq4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzv-Kv-afi">
+                                <rect key="frame" x="57" y="400" width="297" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mzv-Kv-afi" firstAttribute="top" secondItem="nb6-As-eLa" secondAttribute="bottom" constant="28.5" id="21l-Na-Ifz"/>
+                            <constraint firstItem="nb6-As-eLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="9M6-f1-xOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mzv-Kv-afi" secondAttribute="trailing" constant="60" id="9W9-Iw-jPv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nb6-As-eLa" secondAttribute="trailing" constant="82" id="CDH-pt-ahp"/>
+                            <constraint firstItem="ndY-EH-EPr" firstAttribute="top" secondItem="Mzv-Kv-afi" secondAttribute="bottom" constant="19" id="Eec-Vg-sZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ndY-EH-EPr" secondAttribute="trailing" constant="78" id="EuR-Ln-k1k"/>
+                            <constraint firstAttribute="trailing" secondItem="zgC-up-OhG" secondAttribute="trailing" id="JSj-ek-Mna"/>
+                            <constraint firstItem="ndY-EH-EPr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="P9g-WL-oxg"/>
+                            <constraint firstItem="zgC-up-OhG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X2c-we-gUb"/>
+                            <constraint firstItem="zgC-up-OhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="byw-iN-VjD"/>
+                            <constraint firstItem="Mzv-Kv-afi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="eYM-FU-AFl"/>
+                            <constraint firstItem="nb6-As-eLa" firstAttribute="top" secondItem="qUs-T6-ga0" secondAttribute="bottom" constant="8" id="f6U-qa-LIU"/>
+                            <constraint firstItem="qUs-T6-ga0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fVZ-7U-X03"/>
+                            <constraint firstItem="ndY-EH-EPr" firstAttribute="top" secondItem="Mzv-Kv-afi" secondAttribute="bottom" constant="19" id="hLe-7d-HEo"/>
+                            <constraint firstItem="Mzv-Kv-afi" firstAttribute="top" secondItem="nb6-As-eLa" secondAttribute="bottom" constant="28.5" id="lMh-VF-S9Z"/>
+                            <constraint firstItem="qUs-T6-ga0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oa5-04-dm9"/>
+                            <constraint firstAttribute="bottom" secondItem="zgC-up-OhG" secondAttribute="bottom" id="y0x-5D-ZR4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ndY-EH-EPr" secondAttribute="bottom" constant="158.5" id="yq1-cG-v1s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qUs-T6-ga0" secondAttribute="bottom" constant="738" id="zK7-Y7-CVm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="computerCard1" destination="2LJ-bV-Mvk" id="N76-jT-Uty"/>
+                        <outlet property="computerCard2" destination="yXS-cU-8Yx" id="LbB-mX-3Dq"/>
+                        <outlet property="dealerCards" destination="tMb-wz-eMh" id="xzu-5N-T0x"/>
+                        <outlet property="gameStatusLabel" destination="Mzv-Kv-afi" id="kd0-s4-Hme"/>
+                        <outlet property="playerCard1" destination="GrV-w3-PoP" id="HfF-4L-p7r"/>
+                        <outlet property="playerCard2" destination="g4S-mN-zM4" id="cm4-1A-rZm"/>
+                        <outlet property="playerCards" destination="d7a-RP-IbY" id="cTi-M6-KTN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="860" height="720"/>
+        <image name="cardBack" width="112" height="162"/>
+        <image name="logo" width="400" height="147"/>
+    </resources>
+</document>
